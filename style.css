@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {
+    background-color: #01080E;
+    text-align: center;
+}
+
+
+.logo {
+    text-decoration: none;
+}
+
+h1, h2 {
+    color: white;
+    font-family: 'Space Grotesk', sans-serif;
+    margin: 0;
+}
+h1 span {
+    color: #169BD9;
+}
+
+.date {
+    background-color: #169BD9;
+    width: fit-content;
+    padding: 4px;
+    border-radius: 8px;
+    margin: 8px auto;
+    color: black;
+}
+
+.archive {
+    font-size: 0.7em;
+    text-decoration: underline;
+}
+
+p, a {
+    color: white;
+    font-family: 'Space Mono', serif;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 64px;
+    padding: 64px;
+}
+
+.image-container {
+    background-image: url(https://apod.nasa.gov/apod/image/9904/lee_gg.jpg);
+    width: 50%;
+    min-height: 50vh;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    justify-content: space-between;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.image-container button {
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.178);
+    color: white;
+    margin-right: auto;
+    border: 1px solid white;
+    opacity: 0;
+}
+
+/* .image-container button:hover {
+    opacity: 1;
+} */
+
+.image-container p {
+    background-color: rgba(0, 0, 0, 0.438);
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    white-space: nowrap;
+    font-size: 0.7em;
+}
+
+.infos-container {
+    width: 50%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: space-between;
+}
+
+.image-wiki button {
+    background-color: #169bd923;
+    border: 1px solid #169BD9;
+    border-radius: 8px;
+    color: #169BD9;
+    padding: 8px 16px;
+    display: inline-flex;
+    gap: 8px;
+    cursor: pointer;
+    font-family: 'Space Mono', serif;
+    align-items: center;
+}
+
+/*
+ARCHIVES
+*/
+.form-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 2fr;
+    background-color: #169bd91e;
+    padding: 8px;
+    border-radius: 8px;
+    width: 50vw;
+    margin: 32px auto 0;
+    cursor: pointer;
+    gap: 24px;
+}
+.form-container:hover {
+    background-color: #169bd950;
+}
+.form-container label {
+    color: white;
+    font-family: 'Space Mono', serif;
+    font-size: 0.8em;
+    display:flex;
+    flex-direction:column-reverse;
+    align-items: center;
+    cursor: pointer;
+}
+.form-container input {
+    background-color:#01080E;
+    border: none;
+    border-radius: 4px;
+    height: 32px;
+    width: 100%;
+    outline: none;
+    text-align: center;
+    color: white;
+    font-family: 'Space Mono', serif;
+    font-size: 1.5em;
+    font-weight: 500;
+    cursor: pointer;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.form-container button {
+    background-color: #01080E;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Space Mono', serif;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    cursor: pointer;
+}
+
+.result-container {
+    display: flex;
+    gap: 32px;
+    padding: 64px 64px 0;
+}
+
+@media (max-width:768px) {
+    .container, .result-container {
+        flex-direction: column;
+        padding: 24px;
+    }
+    .image-container, .infos-container {
+        width: 100% !important;
+    }
+    body {
+        padding: 32px 0;
+        margin: 0;
+    }
+    .image-container {
+        padding: 0;
+    }
+    .infos-container {
+        gap: 32px;
+    }
+    .form-container {
+        gap: 8px;
+        row-gap: 16px;
+        grid-template-columns: 1fr 1fr 2fr;
+    }
+    .form-container input:not(:nth-child(3)) {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .form-container button {
+        padding: 8px;
+        grid-column: 1 / 4;
+    }
+}

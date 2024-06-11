@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delorean Space</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <special-header></special-header>
+
+    <div class="form-container">
+        <label for="month">Month <input type="number" id="month" min="1" max="12"></label>
+        <label for="day">Day <input type="number" id="day" min="1" max="31"></label>
+        <label for="year">Year <input type="number" id="year" min="1995"></label>
+        <button class="date-button"><i class="fa-solid fa-rotate-left"></i>Let's go !</button>
+    </div>
+
+    <a href="index.html" class="archive">See the picture of the day.</a>
+
+    <div class="result-container">
+        <div class="image-container">
+            <button><i class="fa-solid fa-download"></i></button>
+            <p class="image-copyright">Copyright de l'image.</p>
+        </div>
+        <div class="infos-container">
+            <h2 class="image-title">Titre de l'image</h2>
+            <p class="image-description">Description de l'image.</p>
+            <a class="image-wiki" href="https://fr.wikipedia.org/wiki/Astronomy_Picture_of_the_Day" target="_blank"><button><i class="fa-solid fa-up-right-from-square"></i>More informations here</button></a>
+        </div>
+    </div>
+    
+    <script src="archive.js"></script>
+    <script src="headerFooter.js"></script>
+    <script src="https://kit.fontawesome.com/e6a435a23d.js" crossorigin="anonymous"></script>
+</body>
+</html>
